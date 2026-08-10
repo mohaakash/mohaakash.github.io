@@ -48,6 +48,7 @@
     </script>
     <style>
         .technical-border { border: 1px solid #293340; }
+        nav { background: rgba(14, 19, 27, 0.5) !important; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 
         body { background: #0E131B !important; color: #F1ECE2 !important; }
         body .bg-background-dark { background-color: #0E131B !important; }
@@ -81,11 +82,12 @@
     class="bg-background-dark text-slate-300 font-body selection:bg-primary selection:text-white">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <nav
-        class="fixed top-0 w-full z-50 border-b border-white/5 bg-background-dark">
+        class="fixed top-0 w-full z-50 border-b border-white/5 bg-background-dark/50 backdrop-blur-md">
         <div
             class="max-w-[1360px] mx-auto px-6 h-16 flex items-center justify-between font-body text-sm">
             <div class="flex items-center space-x-2">
-                <span class="w-2 h-2 bg-primary rounded-full"></span>
+                <img src="assets/profile_1.png" width="32" height="32"
+                    alt="Mohammad Akash" class="w-8 h-8 object-cover rounded-md border border-white/10" />
                 <span class="site-name text-white">Mohammad Akash</span>
             </div>
             <div class="hidden md:flex space-x-8">
@@ -150,30 +152,61 @@
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
                         <div class="md:col-span-5">
                             <p class="font-display text-primary text-sm tracking-[0.14em] mb-4">01 &nbsp; FEATURED PROJECT</p>
-                            <h3 class="text-3xl md:text-4xl text-white mb-4">Autonomous Chemical Spraying Robot</h3>
+                            <h3 class="text-3xl md:text-4xl text-white mb-4">Betopia AI Ecosystem</h3>
                             <p class="text-slate-400 leading-relaxed max-w-lg">
-                                A real-time perception and control system for precision agriculture, identifying weeds
-                                and crops and triggering targeted spraying on edge hardware.
+                                An internal AI ecosystem that gives Betopia teams one reliable platform for conversation,
+                                code, generative media, model routing, and autonomous workflows.
                             </p>
                             <p class="font-display text-xs text-slate-500 mt-5">
-                                Computer vision · Robotics · YOLOv8-Nano · 42 ms · 0.92 mAP@50
+                                Model routing · LLM infrastructure · Observability · Production platform
                             </p>
                             <a target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center text-sm font-display text-primary mt-6 hover:underline"
-                                href="https://github.com/mohaakash/USR">
-                                View repository <span aria-hidden="true" class="ml-2">→</span>
+                                href="https://betopia.ai/">
+                                Visit Betopia AI <span aria-hidden="true" class="ml-2">↗</span>
                             </a>
                         </div>
-                        <figure class="md:col-span-7 border border-white/10 bg-black/50 overflow-hidden">
-                            <img width="960" height="1280" loading="lazy" alt="Autonomous chemical spraying robot prototype"
-                                class="w-full max-h-80 object-cover object-center" src="assets/usr_image.png" />
-                        </figure>
+                        <div class="md:col-span-7 border border-white/10 bg-card-dark p-6 md:p-8">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+                                <div>
+                                    <p class="font-display text-xs text-primary mb-2">ADOPTION</p>
+                                    <p class="text-xl text-white">26 SBUs</p>
+                                    <p class="text-sm text-slate-500 mt-1">Used across the Betopia group</p>
+                                </div>
+                                <div>
+                                    <p class="font-display text-xs text-primary mb-2">REACH</p>
+                                    <p class="text-xl text-white">5,000+ employees</p>
+                                    <p class="text-sm text-slate-500 mt-1">Supporting internal AI workflows</p>
+                                </div>
+                                <div>
+                                    <p class="font-display text-xs text-primary mb-2">CAPABILITIES</p>
+                                    <p class="text-sm text-slate-400 leading-relaxed">Inference routing · fallback models · model comparison</p>
+                                </div>
+                                <div>
+                                    <p class="font-display text-xs text-primary mb-2">OPERATIONS</p>
+                                    <p class="text-sm text-slate-400 leading-relaxed">Usage monitoring · latency and spend tracking · request traces</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <div class="divide-y divide-white/5">
                     <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
                         <p class="font-display text-primary text-sm md:col-span-1">02</p>
+                        <div class="md:col-span-8">
+                            <h3 class="text-2xl text-white mb-2">Autonomous Chemical Spraying Robot</h3>
+                            <p class="text-slate-400 leading-relaxed">
+                                A real-time perception and control system for precision agriculture, identifying weeds
+                                and crops and triggering targeted spraying on edge hardware.
+                            </p>
+                            <p class="font-display text-xs text-slate-500 mt-3">Computer vision · Robotics · YOLOv8-Nano · 42 ms · 0.92 mAP@50</p>
+                        </div>
+                        <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/USR">View repository →</a>
+                    </article>
+
+                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
+                        <p class="font-display text-primary text-sm md:col-span-1">03</p>
                         <div class="md:col-span-8">
                             <h3 class="text-2xl text-white mb-2">RAGbot: Knowledge Assistant</h3>
                             <p class="text-slate-400 leading-relaxed">
@@ -186,7 +219,7 @@
                     </article>
 
                     <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
-                        <p class="font-display text-primary text-sm md:col-span-1">03</p>
+                        <p class="font-display text-primary text-sm md:col-span-1">04</p>
                         <div class="md:col-span-8">
                             <h3 class="text-2xl text-white mb-2">Social Media Post Maker</h3>
                             <p class="text-slate-400 leading-relaxed">
@@ -199,7 +232,7 @@
                     </article>
 
                     <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
-                        <p class="font-display text-primary text-sm md:col-span-1">04</p>
+                        <p class="font-display text-primary text-sm md:col-span-1">05</p>
                         <div class="md:col-span-8">
                             <h3 class="text-2xl text-white mb-2">AI-Based Grocery Checkout</h3>
                             <p class="text-slate-400 leading-relaxed">
@@ -223,13 +256,19 @@
                                     <h4 class="text-xl font-semibold text-white mb-1 bg-primary inline-block px-1">AI
                                         Engineer</h4>
                                     <p class="font-display text-sm text-primary mb-4">BETOPIA GROUP, DHAKA</p>
-                                    <p class="text-sm text-slate-400 leading-relaxed max-w-xl mb-4">Transforming Betopia
-                                        into an AI-first platform through LLM systems and intelligent tooling.</p>
+                                    <p class="text-sm text-slate-400 leading-relaxed max-w-xl mb-4">Contributing to the
+                                        Betopia AI Ecosystem, an internal AI platform used across 26 SBUs and by more
+                                        than 5,000 employees.</p>
                                     <ul class="space-y-2 max-w-xl">
                                         <li class="flex gap-3 text-sm text-slate-400">
                                             <span class="text-primary font-display shrink-0">—</span>
-                                            Built and deployed internal LLM provider platform, enabling unified access
-                                            to multiple models via API
+                                            Designed and deployed the model gateway, giving teams unified API access
+                                            to multiple models with routing and fallback support
+                                        </li>
+                                        <li class="flex gap-3 text-sm text-slate-400">
+                                            <span class="text-primary font-display shrink-0">—</span>
+                                            Contributed to a production ecosystem used across 26 SBUs and supporting
+                                            more than 5,000 employees
                                         </li>
                                         <li class="flex gap-3 text-sm text-slate-400">
                                             <span class="text-primary font-display shrink-0">—</span>
