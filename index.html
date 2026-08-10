@@ -4,273 +4,223 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="description" content="Mohammad Akash | Technical AI/ML Researcher/Engineer" />
-    <meta name="keywords" content="Mohammad Akash, AI/ML Researcher, AI/ML Engineer, AI/ML Researcher/Engineer" />
+    <meta name="description" content="Mohammad Akash is an AI/ML Engineer building production systems in computer vision, LLMs, and intelligent automation." />
+    <meta name="keywords" content="Mohammad Akash, AI/ML Engineer, computer vision, LLM, machine learning, Bangladesh" />
     <meta name="author" content="Mohammad Akash" />
-    <meta name="key" content="AI trainer/engineer/Researcher" />
-    <title>Mohammad Akash | Technical AI/ML Researcher/Engineer</title>
+    <meta name="theme-color" content="#0E131B" />
+    <meta property="og:title" content="Mohammad Akash | AI/ML Engineer" />
+    <meta property="og:description" content="AI/ML Engineer building systems in computer vision, LLMs, and intelligent automation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mohaakash.github.io/" />
+    <link rel="canonical" href="https://mohaakash.github.io/" />
+    <title>Mohammad Akash | AI/ML Engineer</title>
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        primary: "#FF3B30", // Subtle red accent from original
-                        "background-light": "#F5F5F7",
-                        "background-dark": "#0A0A0B", // Charcoal/Deep research feel
-                        "card-dark": "#161618",
+                        primary: "#6DAFE3",
+                        "background-light": "#0E131B",
+                        "background-dark": "#0E131B",
+                        "card-dark": "#151C26",
                     },
                     fontFamily: {
-                        display: ["JetBrains Mono", "monospace"],
-                        body: ["Inter", "sans-serif"],
+                        display: ["DM Mono", "monospace"],
+                        body: ["DM Sans", "sans-serif"],
                     },
                     borderRadius: {
-                        DEFAULT: "0.25rem", // Minimal, technical feel
+                        DEFAULT: "0.15rem",
                     },
                 },
             },
         };
     </script>
     <style>
-        .grid-pattern {
-            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
+        .technical-border { border: 1px solid #293340; }
 
-        .code-glow {
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-        }
+        body { background: #0E131B !important; color: #F1ECE2 !important; }
+        body .bg-background-dark { background-color: #0E131B !important; }
+        body .bg-card-dark { background-color: #151C26 !important; }
+        body .text-white { color: #F1ECE2 !important; }
+        body .text-slate-300 { color: #A8A49C !important; }
+        body .text-slate-400 { color: #BDB6AA !important; }
+        body .text-slate-500 { color: #9B9EA7 !important; }
+        body .text-primary { color: #6DAFE3 !important; }
+        body .bg-primary { background-color: #F1ECE2 !important; color: #142033 !important; }
+        body .border-primary { border-color: #6DAFE3 !important; }
+        body .border-white\/5 { border-color: #293340 !important; }
+        body .border-white\/10 { border-color: #293340 !important; }
+        body .bg-white\/5 { background-color: #18202B !important; }
+        body .bg-black\/20 { background-color: #10161F !important; }
+        body .bg-black\/40 { background-color: #10161F !important; }
+        body .bg-black\/50 { background-color: #10161F !important; }
+        body .border-slate-700 { border-color: #293340 !important; }
+        body .hover\:bg-slate-800:hover { background-color: #1D2734 !important; }
+        body .selection\:bg-primary::selection { background-color: #6DAFE3 !important; color: #0E131B !important; }
+        h1, h2, h3, h4 { font-family: "DM Serif Display", Georgia, serif !important; font-weight: 400 !important; letter-spacing: -0.025em; }
+        .site-name { font-family: "DM Serif Display", Georgia, serif; font-size: 1.2rem; }
 
-        .technical-border {
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+        :focus-visible { outline: 2px solid #6DAFE3; outline-offset: 3px; }
+        .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: #6DAFE3; color: #0E131B; padding: 0.75rem 1rem; }
+        .skip-link:focus { left: 1rem; }
     </style>
 </head>
 
 <body
-    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-300 font-body selection:bg-primary selection:text-white">
-    <div class="fixed inset-0 grid-pattern pointer-events-none opacity-40"></div>
+    class="bg-background-dark text-slate-300 font-body selection:bg-primary selection:text-white">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <nav
-        class="fixed top-0 w-full z-50 border-b border-black/5 dark:border-white/5 backdrop-blur-md bg-background-light/80 dark:bg-background-dark/80">
+        class="fixed top-0 w-full z-50 border-b border-white/5 bg-background-dark">
         <div
-            class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between font-display text-xs tracking-widest uppercase">
+            class="max-w-[1360px] mx-auto px-6 h-16 flex items-center justify-between font-body text-sm">
             <div class="flex items-center space-x-2">
-                <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
-                <span class="dark:text-white">Mohammad Akash</span>
+                <span class="w-2 h-2 bg-primary rounded-full"></span>
+                <span class="site-name text-white">Mohammad Akash</span>
             </div>
             <div class="hidden md:flex space-x-8">
-                <a class="hover:text-primary transition-colors" href="#research">/research</a>
-                <a class="hover:text-primary transition-colors" href="#experience">/experience</a>
-                <a class="hover:text-primary transition-colors" href="#contact">/contact</a>
+                <a class="hover:text-primary transition-colors" href="#research">Projects</a>
+                <a class="hover:text-primary transition-colors" href="#experience">Experience</a>
+                <a class="hover:text-primary transition-colors" href="#contact">Contact</a>
             </div>
-            <div>
-                <a target="_blank"
-                    class="border border-slate-300 dark:border-slate-700 px-3 py-1 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
-                    href="./assets/cv_akash.pdf">RESUME.PDF</a>
-                <a class="border border-slate-300 dark:border-slate-700 px-3 py-1 bg-primary dark:hover:bg-slate-800 transition-all"
-                    href="mailto:mhakash160@gmail.com">EMAIL</a>
+            <div class="flex items-center gap-2">
+                <a target="_blank" rel="noopener noreferrer"
+                    class="border border-slate-700 px-4 py-2 rounded-full hover:bg-slate-800 transition-all"
+                    href="./assets/cv_akash.pdf">Resume</a>
+                <a class="border border-primary px-4 py-2 rounded-full bg-primary hover:bg-slate-800 transition-all"
+                    href="mailto:mhakash160@gmail.com">Email</a>
+                <button id="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav"
+                    aria-label="Open navigation menu" class="md:hidden border border-slate-700 px-4 py-2 rounded-full text-white">Menu</button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="hidden md:hidden border-t border-white/5 px-6 py-4 font-body text-sm">
+            <div class="max-w-[1360px] mx-auto flex flex-col gap-4">
+                <a href="#research">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
-    <main class="relative pt-32 pb-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <section class="mb-32">
-                <p class="font-display text-primary text-sm mb-4 tracking-tighter">01_HELLO_WORLD</p>
-                <div class="flex flex-col md:flex-row items-center gap-8 mb-8">
-                    <h1
-                        class="font-display text-5xl md:text-8xl font-bold dark:text-white tracking-tighter leading-none">
-                        TECHNICAL <br />AI RESEARCHER.
-                    </h1>
-                    <img src="assets/profile_1.png" alt="Mohammad Akash Profile"
-                        class="w-36 h-36 md:w-52 md:h-52 object-cover rounded-lg technical-border" />
-                </div>
-                <div class="flex flex-wrap gap-12 max-w-7xl">
-                    <div class="w-full md:w-1/2">
-                        <p class="text-xl leading-relaxed font-light dark:text-slate-400">
-                            I build AI systems that balance sophistication with simplicity, prioritizing maintainability
-                            without sacrificing performance. My decisions are driven by data, not opinions, and grounded
-                            in
-                            first-principles thinking.
-                        </p>
-                        <div class="flex space-x-6 font-display text-xs tracking-widest uppercase mt-6">
+    <main id="main-content" class="relative pt-32 pb-24 px-6">
+        <div class="max-w-[1360px] mx-auto">
+            <section class="mb-32 border-b border-white/5 pb-24 text-center">
+                <p class="font-display text-primary text-sm mb-6 tracking-[0.18em]">AI · ML · VISION · LLM</p>
+                <h1 class="text-5xl md:text-7xl text-white leading-tight max-w-5xl mx-auto">
+                    I build AI systems for <span class="text-primary italic">real problems.</span>
+                </h1>
+                <div class="max-w-2xl mx-auto mt-8">
+                    <p class="text-lg md:text-xl leading-relaxed font-light text-slate-400">
+                        I’m Mohammad Akash, an AI/ML engineer based in Dhaka. I work on computer vision, LLM systems,
+                        and practical automation.
+                    </p>
+                    <p class="text-base leading-relaxed font-light text-slate-400 mt-4">
+                        My recent work includes agricultural robotics, visual product recognition, and internal AI tools.
+                    </p>
+                        <div class="flex flex-wrap justify-center gap-4 font-display text-xs tracking-widest mt-8">
+                            <a class="border border-primary bg-primary px-5 py-3 rounded-full hover:bg-slate-800 transition-colors"
+                                href="#research">View projects <span aria-hidden="true">→</span></a>
+                            <a class="border border-slate-700 px-5 py-3 rounded-full hover:bg-slate-800 transition-colors"
+                                href="#contact">Let’s connect</a>
+                        </div>
+                        <div class="flex justify-center space-x-6 font-display text-xs tracking-widest uppercase mt-7">
                             <a class="hover:text-primary transition-colors"
                                 href="https://www.linkedin.com/in/mohaakash/">LinkedIn</a>
                             <a class="hover:text-primary transition-colors"
                                 href="https://github.com/mohaakash">GitHub</a>
                         </div>
                     </div>
-
-
-                    <div class="w-full md:w-1/2 flex flex-col justify-start space-y-2 font-display text-sm">
-                        <div class="flex gap-6 border-b border-white/10 pb-2">
-                            <span class="opacity-50">LOCATION</span>
-                            <span>DHAKA, BANGLADESH</span>
-                        </div>
-                    </div>
-                </div>
             </section>
             <section class="mb-32" id="research">
-                <div class="flex justify-between items-end mb-12">
-                    <div>
-                        <p class="font-display text-primary text-sm mb-2 tracking-tighter">02_PORTFOLIO</p>
-                        <h2 class="font-display text-4xl font-bold dark:text-white">RESEARCH &amp; CASE STUDIES</h2>
-                    </div>
-                    <div class="hidden md:block font-display text-[10px] opacity-40 uppercase tracking-[0.3em]">
-                        Filtered by technical depth
-                    </div>
+                <div class="border-t border-white/5 pt-6 mb-8">
+                    <p class="font-display text-primary text-sm mb-2 tracking-[0.14em]">§ 01 &nbsp; SELECTED PROJECTS</p>
+                    <h2 class="text-4xl text-white">A few things I’ve <span class="text-primary italic">built.</span></h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                    <div
-                        class="md:col-span-8 bg-card-dark technical-border p-8 group hover:border-primary/50 transition-all duration-500">
-                        <div class="flex flex-col md:flex-row gap-8">
-                            <div class="flex-1">
-                                <span
-                                    class="font-display text-[10px] text-primary bg-primary/10 px-2 py-0.5 mb-4 inline-block">COMPUTER
-                                    VISION</span>
-                                <h3 class="font-display text-2xl text-white mb-4">Autonomous Chemical Spraying Robot
-                                </h3>
-                                <p class="text-slate-400 mb-6 text-sm leading-relaxed">
-                                    Engineered a full perception-action pipeline by deploying a YOLOv8 model on edge
-                                    hardware (NodeMCU) for real-time weed/crop identification.
-                                </p>
-                                <div
-                                    class="bg-black/40 p-4 rounded mb-6 font-display text-[11px] text-slate-500 border-l-2 border-primary">
-                                    <div class="flex justify-between mb-1">
-                                        <span>Inference Latency:</span>
-                                        <span class="text-white">42ms</span>
-                                    </div>
-                                    <div class="flex justify-between mb-1">
-                                        <span>Model:</span>
-                                        <span class="text-white">YOLOv8-Nano (Pruned)</span>
-                                    </div>
-                                    <div class="flex justify-between">
-                                        <span>Precision:</span>
-                                        <span class="text-white">0.92 mAP@50</span>
-                                    </div>
-                                </div>
-                                <a target="_blank"
-                                    class="inline-flex items-center text-xs font-display text-primary hover:underline"
-                                    href="https://github.com/mohaakash/USR">
-                                    VIEW REPOSITORY <span
-                                        class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-                                </a>
-                            </div>
-                            <div
-                                class="flex-1 bg-black/50 p-4 technical-border flex items-center justify-center overflow-hidden">
-                                <img alt="Chemical spray robot"
-                                    class="opacity-50 grayscale group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-700"
-                                    src="assets/usr_image.png" />
-                            </div>
+
+                <article class="border-y border-white/5 py-8 md:py-10">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+                        <div class="md:col-span-5">
+                            <p class="font-display text-primary text-sm tracking-[0.14em] mb-4">01 &nbsp; FEATURED PROJECT</p>
+                            <h3 class="text-3xl md:text-4xl text-white mb-4">Autonomous Chemical Spraying Robot</h3>
+                            <p class="text-slate-400 leading-relaxed max-w-lg">
+                                A real-time perception and control system for precision agriculture, identifying weeds
+                                and crops and triggering targeted spraying on edge hardware.
+                            </p>
+                            <p class="font-display text-xs text-slate-500 mt-5">
+                                Computer vision · Robotics · YOLOv8-Nano · 42 ms · 0.92 mAP@50
+                            </p>
+                            <a target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center text-sm font-display text-primary mt-6 hover:underline"
+                                href="https://github.com/mohaakash/USR">
+                                View repository <span aria-hidden="true" class="ml-2">→</span>
+                            </a>
                         </div>
+                        <figure class="md:col-span-7 border border-white/10 bg-black/50 overflow-hidden">
+                            <img width="960" height="1280" loading="lazy" alt="Autonomous chemical spraying robot prototype"
+                                class="w-full max-h-80 object-cover object-center" src="assets/usr_image.png" />
+                        </figure>
                     </div>
-                    <div
-                        class="md:col-span-4 bg-card-dark technical-border p-8 group hover:border-primary/50 transition-all duration-500">
-                        <span
-                            class="font-display text-[10px] text-primary bg-primary/10 px-2 py-0.5 mb-4 inline-block">LLM
-                            OPS</span>
-                        <h3 class="font-display text-2xl text-white mb-4">RAGbot: Knowledge Assistant</h3>
-                        <p class="text-slate-400 mb-6 text-sm leading-relaxed">
-                            Built an LLM-powered assistant utilizing Gemini Pro with semantic search via FAISS.
-                            Implemented complex chunking strategies for enterprise PDF parsing.
-                        </p>
-                        <div class="space-y-4 mb-6">
-                            <div class="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-primary w-[88%]"></div>
-                            </div>
-                            <div class="flex justify-between font-display text-[10px] opacity-60 uppercase">
-                                <span>Retrieval Accuracy</span>
-                                <span>88.4%</span>
-                            </div>
+                </article>
+
+                <div class="divide-y divide-white/5">
+                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
+                        <p class="font-display text-primary text-sm md:col-span-1">02</p>
+                        <div class="md:col-span-8">
+                            <h3 class="text-2xl text-white mb-2">RAGbot: Knowledge Assistant</h3>
+                            <p class="text-slate-400 leading-relaxed">
+                                An LLM-powered assistant using Gemini Pro, FAISS semantic search, and document chunking
+                                for enterprise PDFs.
+                            </p>
+                            <p class="font-display text-xs text-slate-500 mt-3">LLMs · FAISS · Gemini · 88.4% retrieval accuracy</p>
                         </div>
-                        <a target="_blank"
-                            class="inline-flex items-center text-xs font-display text-primary hover:underline"
-                            href="https://github.com/mohaakash/RAGbot-gui">
-                            GITHUB <span class="material-symbols-outlined text-sm ml-1">link</span>
-                        </a>
-                    </div>
-                    <div
-                        class="md:col-span-5 bg-card-dark technical-border p-8 group hover:border-primary/50 transition-all duration-500">
-                        <span
-                            class="font-display text-[10px] text-primary bg-primary/10 px-2 py-0.5 mb-4 inline-block">AUTOMATION</span>
-                        <h3 class="font-display text-2xl text-white mb-4">Social Media Post Maker</h3>
-                        <p class="text-slate-400 mb-6 text-sm leading-relaxed">
-                            Automated a multimodal pipeline: video/audio transcription (Whisper) → summarization →
-                            publish-ready posts (Gemini API).
-                        </p>
-                        <div
-                            class="font-display text-[11px] text-green-500 bg-green-500/5 p-3 rounded border border-green-500/20 mb-6">
-                            $ pipeline_status: SUCCESS <br />
-                            $ token_efficiency: +34% <br />
-                            $ latency: 1.2s avg
+                        <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/RAGbot-gui">View repository →</a>
+                    </article>
+
+                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
+                        <p class="font-display text-primary text-sm md:col-span-1">03</p>
+                        <div class="md:col-span-8">
+                            <h3 class="text-2xl text-white mb-2">Social Media Post Maker</h3>
+                            <p class="text-slate-400 leading-relaxed">
+                                A multimodal pipeline that turns video and audio into publish-ready social posts using
+                                transcription, summarization, and Gemini.
+                            </p>
+                            <p class="font-display text-xs text-slate-500 mt-3">Whisper · Gemini API · 1.2 s average latency</p>
                         </div>
-                        <a target="_blank"
-                            class="inline-flex items-center text-xs font-display text-primary hover:underline"
-                            href="https://github.com/mohaakash/video-audio-to-social-media-post-maker">
-                            GITHUB <span class="material-symbols-outlined text-sm ml-1">link</span>
-                        </a>
-                    </div>
-                    <div
-                        class="md:col-span-7 bg-card-dark technical-border p-8 group hover:border-primary/50 transition-all duration-500">
-                        <div class="flex flex-col md:flex-row gap-6">
-                            <div class="flex-1">
-                                <span
-                                    class="font-display text-[10px] text-primary bg-primary/10 px-2 py-0.5 mb-4 inline-block">RETAIL
-                                    AI</span>
-                                <h3 class="font-display text-2xl text-white mb-4">AI-Based Grocery Checkout</h3>
-                                <p class="text-slate-400 mb-4 text-sm leading-relaxed">
-                                    Developed an automated computer vision checkout system with a high validation
-                                    accuracy of 0.995 mAP@50.
-                                </p>
-                                <ul class="text-[11px] font-display text-slate-500 space-y-1 mb-6">
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-primary mr-2"></span> DATASET:
-                                        50,000+ LABELED IMAGES</li>
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-primary mr-2"></span> BACKEND:
-                                        FASTAPI + DOCKER</li>
-                                    <li class="flex items-center"><span class="w-1 h-1 bg-primary mr-2"></span>
-                                        DEPLOYMENT: AWS EC2 G4DN</li>
-                                </ul>
-                                <a target="_blank"
-                                    class="inline-flex items-center text-xs font-display text-primary hover:underline"
-                                    href="https://github.com/mohaakash/AI_Product_Checkout_System">
-                                    VIEW REPOSITORY <span
-                                        class="material-symbols-outlined text-sm ml-1">description</span>
-                                </a>
-                            </div>
-                            <div class="flex-1 hidden md:block">
-                                <div
-                                    class="relative w-full h-full min-h-[150px] bg-slate-900 flex items-center justify-center p-4">
-                                    <pre class="text-[9px] text-slate-600 font-display">def detect_objects(frame):
-    results = model(frame)
-    for res in results:
-        boxes = res.boxes
-        # ... logic ...
-        return filtered_output
-                                    </pre>
-                                </div>
-                            </div>
+                        <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/video-audio-to-social-media-post-maker">View repository →</a>
+                    </article>
+
+                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
+                        <p class="font-display text-primary text-sm md:col-span-1">04</p>
+                        <div class="md:col-span-8">
+                            <h3 class="text-2xl text-white mb-2">AI-Based Grocery Checkout</h3>
+                            <p class="text-slate-400 leading-relaxed">
+                                A computer vision checkout system for recognizing products and building a real-time
+                                shopping list.
+                            </p>
+                            <p class="font-display text-xs text-slate-500 mt-3">Computer vision · FastAPI · Docker · AWS · 0.995 mAP@50</p>
                         </div>
-                    </div>
+                        <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/AI_Product_Checkout_System">View repository →</a>
+                    </article>
                 </div>
             </section>
             <section class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-white/5 pt-16">
                 <div class="md:col-span-8 space-y-16" id="experience">
                     <div>
-                        <p class="font-display text-primary text-sm mb-8 tracking-tighter">03_EXPERIENCE</p>
+                        <p class="font-display text-primary text-sm mb-8 tracking-[0.14em]">§ 02 &nbsp; EXPERIENCE</p>
                         <div class="space-y-12">
                             <div class="flex flex-col md:flex-row gap-4 md:gap-12">
-                                <div class="md:w-32 font-display text-xs opacity-40 py-1">2025 — PRES</div>
+                                <div class="md:w-32 font-display text-xs opacity-40 py-1">2025 — PRESENT</div>
                                 <div class="flex-1">
-                                    <h4 class="font-display text-xl text-white mb-1 bg-[#FF3B30] inline-block"> AI
+                                    <h4 class="text-xl font-semibold text-white mb-1 bg-primary inline-block px-1">AI
                                         Engineer</h4>
                                     <p class="font-display text-sm text-primary mb-4">BETOPIA GROUP, DHAKA</p>
                                     <p class="text-sm text-slate-400 leading-relaxed max-w-xl mb-4">Transforming Betopia
@@ -307,7 +257,7 @@
                             <div class="flex flex-col md:flex-row gap-4 md:gap-12">
                                 <div class="md:w-32 font-display text-xs opacity-40 py-1">2020 — 2025</div>
                                 <div class="flex-1">
-                                    <h4 class="font-display text-xl text-white mb-1 bg-[#FF3B30] inline-block">B.Sc. in
+                                    <h4 class="text-xl font-semibold text-white mb-1 bg-primary inline-block px-1">B.Sc. in
                                         Computer Science and
                                         Engineering</h4>
                                     <p class="font-display text-sm text-primary mb-4">NORTH SOUTH UNIVERSITY</p>
@@ -336,21 +286,35 @@
                 </div>
                 <div class="md:col-span-4 space-y-12">
                     <div>
-                        <p class="font-display text-primary text-sm mb-8 tracking-tighter">04_STACK</p>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="p-3 bg-white/5 technical-border font-display text-[10px] uppercase">PyTorch
+                        <p class="font-display text-primary text-sm mb-8 tracking-[0.14em]">§ 03 &nbsp; TECHNICAL TOOLKIT</p>
+                        <div class="border-y border-white/5">
+                            <div class="py-5 border-b border-white/5">
+                                <p class="font-display text-xs text-primary mb-2">ML SYSTEMS</p>
+                                <p class="text-slate-400 leading-relaxed">Python · PyTorch · TensorFlow · scikit-learn · NumPy · OpenCV</p>
                             </div>
-                            <div class="p-3 bg-white/5 technical-border font-display text-[10px] uppercase">TensorFlow
+                            <div class="py-5 border-b border-white/5">
+                                <p class="font-display text-xs text-primary mb-2">LLM &amp; GENAI</p>
+                                <p class="text-slate-400 leading-relaxed">LLM applications · RAG · LangChain · vector search · Gemini, OpenAI &amp; Groq APIs</p>
                             </div>
-                            <div class="p-3 bg-white/5 technical-border font-display text-[10px] uppercase">LangChain
+                            <div class="py-5 border-b border-white/5">
+                                <p class="font-display text-xs text-primary mb-2">PRODUCTION</p>
+                                <p class="text-slate-400 leading-relaxed">FastAPI · Docker · AWS · Redis · Git · SQL</p>
                             </div>
-                            <div class="p-3 bg-white/5 technical-border font-display text-[10px] uppercase">FAISS</div>
-                            <div class="p-3 bg-white/5 technical-border font-display text-[10px] uppercase">Docker</div>
-                            <div class="p-3 bg-white/5 technical-border font-display text-[10px] uppercase">OpenCV</div>
+                            <div class="py-5">
+                                <p class="font-display text-xs text-primary mb-2">METHODS</p>
+                                <p class="text-slate-400 leading-relaxed">Computer vision · NLP · fine-tuning · model evaluation · inference optimization</p>
+                            </div>
                         </div>
                     </div>
-                    <div id="contact">
-                        <p class="font-display text-primary text-sm mb-8 tracking-tighter">05_CONNECTION</p>
+                    <div>
+                        <p class="font-display text-primary text-sm mb-8 tracking-[0.14em]">§ 04 &nbsp; INTERESTS</p>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            Interested in reliable AI products, multimodal systems, computer vision, robotics, and
+                            practical deployment of machine learning research.
+                        </p>
+                    </div>
+                    <div id="contact" class="bg-card-dark technical-border rounded-2xl p-6">
+                        <p class="font-display text-primary text-sm mb-8 tracking-[0.14em]">§ 05 &nbsp; GET IN TOUCH</p>
                         <div class="space-y-4">
                             <a class="block font-display text-lg md:text-xl text-primary transition-colors truncate"
                                 href="mailto:mhakash160@gmail.com">
@@ -370,14 +334,25 @@
     </main>
     <footer class="py-12 px-6 border-t border-white/5">
         <div
-            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center font-display text-[10px] opacity-30 uppercase tracking-[0.2em]">
+            class="max-w-[1360px] mx-auto flex flex-col md:flex-row justify-between items-center font-display text-[10px] opacity-50 uppercase tracking-[0.2em]">
             <span>© 2026 Mohammad Akash</span>
-            <div class="mt-4 md:mt-0">
-                SYSTEM_VERSION: 2.17.0
-            </div>
         </div>
     </footer>
-    <div class="fixed -bottom-32 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileNav = document.getElementById('mobile-nav');
+        menuButton.addEventListener('click', () => {
+            const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', String(!isOpen));
+            menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+            mobileNav.classList.toggle('hidden', isOpen);
+        });
+        mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Open navigation menu');
+            mobileNav.classList.add('hidden');
+        }));
+    </script>
 
 </body>
 
