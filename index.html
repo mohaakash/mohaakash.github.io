@@ -72,6 +72,8 @@
         body .selection\:bg-primary::selection { background-color: #6DAFE3 !important; color: #0E131B !important; }
         h1, h2, h3, h4 { font-family: "DM Serif Display", Georgia, serif !important; font-weight: 400 !important; letter-spacing: -0.025em; }
         .site-name { font-family: "DM Serif Display", Georgia, serif; font-size: 1.2rem; }
+        .nav-avatar { transform: scale(1.8); transform-origin: 50% 31%; }
+        .contact-portrait { transform: scale(1.45); transform-origin: 50% 31%; }
 
         :focus-visible { outline: 2px solid #6DAFE3; outline-offset: 3px; }
         .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: #6DAFE3; color: #0E131B; padding: 0.75rem 1rem; }
@@ -97,8 +99,10 @@
         <div
             class="max-w-[1360px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between font-body text-sm gap-2">
             <div class="flex items-center space-x-2">
-                <img src="assets/profile_1.png" width="32" height="32"
-                    alt="Mohammad Akash" class="w-8 h-8 object-cover rounded-md border border-white/10" />
+                <span class="w-8 h-8 overflow-hidden rounded-md border border-white/10 shrink-0">
+                    <img src="assets/image1.jpeg" width="32" height="32"
+                        alt="Mohammad Akash" class="nav-avatar w-full h-full object-cover" />
+                </span>
                 <span class="site-name text-white">Mohammad Akash</span>
             </div>
             <div class="hidden md:flex space-x-8">
@@ -398,16 +402,22 @@
                     </div>
                     <div id="contact" class="bg-card-dark technical-border rounded-2xl p-6">
                         <p class="font-display text-primary text-sm mb-8 tracking-[0.14em]">§ 05 &nbsp; GET IN TOUCH</p>
-                        <div class="space-y-4">
-                            <a class="block font-display text-base sm:text-lg md:text-xl text-primary transition-colors wrap-anywhere"
-                                href="mailto:mhakash160@gmail.com">
-                                mhakash160@gmail.com
-                            </a>
-                            <div class="flex space-x-6 font-display text-xs tracking-widest uppercase mt-6">
-                                <a class="hover:text-primary transition-colors"
-                                    href="https://www.linkedin.com/in/mohaakash/">LinkedIn</a>
-                                <a class="hover:text-primary transition-colors"
-                                    href="https://github.com/mohaakash">GitHub</a>
+                        <div class="flex items-center gap-4">
+                            <div class="w-20 h-24 sm:w-24 sm:h-28 overflow-hidden rounded-xl border border-primary bg-card-dark shrink-0">
+                                <img src="assets/image1.jpeg" alt="Portrait of Mohammad Akash"
+                                    class="contact-portrait w-full h-full object-cover" />
+                            </div>
+                            <div class="space-y-4 min-w-0">
+                                <a class="block font-display text-base sm:text-lg md:text-xl text-primary transition-colors wrap-anywhere"
+                                    href="mailto:mhakash160@gmail.com">
+                                    mhakash160@gmail.com
+                                </a>
+                                <div class="flex space-x-6 font-display text-xs tracking-widest uppercase">
+                                    <a class="hover:text-primary transition-colors"
+                                        href="https://www.linkedin.com/in/mohaakash/">LinkedIn</a>
+                                    <a class="hover:text-primary transition-colors"
+                                        href="https://github.com/mohaakash">GitHub</a>
+                                </div>
                             </div>
                         </div>
                     </div>
