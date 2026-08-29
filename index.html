@@ -75,6 +75,16 @@
         :focus-visible { outline: 2px solid #6DAFE3; outline-offset: 3px; }
         .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: #6DAFE3; color: #0E131B; padding: 0.75rem 1rem; }
         .skip-link:focus { left: 1rem; }
+
+        /* Keep content usable on very narrow screens, including long project URLs and technical terms. */
+        html, body { overflow-x: hidden; }
+        img { max-width: 100%; }
+        .wrap-anywhere { overflow-wrap: anywhere; }
+
+        @media (max-width: 767px) {
+            .site-name { font-size: 1.05rem; }
+            #mobile-nav a { padding: 0.25rem 0; }
+        }
     </style>
 </head>
 
@@ -84,7 +94,7 @@
     <nav
         class="fixed top-0 w-full z-50 border-b border-white/5 bg-background-dark/50 backdrop-blur-md">
         <div
-            class="max-w-[1360px] mx-auto px-6 h-16 flex items-center justify-between font-body text-sm">
+            class="max-w-[1360px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between font-body text-sm gap-2">
             <div class="flex items-center space-x-2">
                 <img src="assets/profile_1.png" width="32" height="32"
                     alt="Mohammad Akash" class="w-8 h-8 object-cover rounded-md border border-white/10" />
@@ -95,33 +105,34 @@
                 <a class="hover:text-primary transition-colors" href="#experience">Experience</a>
                 <a class="hover:text-primary transition-colors" href="#contact">Contact</a>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
                 <a target="_blank" rel="noopener noreferrer"
-                    class="border border-slate-700 px-4 py-2 rounded-full hover:bg-slate-800 transition-all"
+                    class="hidden sm:inline-flex border border-slate-700 px-4 py-2 rounded-full hover:bg-slate-800 transition-all"
                     href="./assets/cv_akash.pdf">Resume</a>
-                <a class="border border-primary px-4 py-2 rounded-full bg-primary hover:bg-slate-800 transition-all"
+                <a class="border border-primary px-3 sm:px-4 py-2 rounded-full bg-primary hover:bg-slate-800 transition-all"
                     href="mailto:mhakash160@gmail.com">Email</a>
                 <button id="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav"
-                    aria-label="Open navigation menu" class="md:hidden border border-slate-700 px-4 py-2 rounded-full text-white">Menu</button>
+                    aria-label="Open navigation menu" class="md:hidden border border-slate-700 px-3 sm:px-4 py-2 rounded-full text-white">Menu</button>
             </div>
         </div>
-        <div id="mobile-nav" class="hidden md:hidden border-t border-white/5 px-6 py-4 font-body text-sm">
-            <div class="max-w-[1360px] mx-auto flex flex-col gap-4">
+        <div id="mobile-nav" class="hidden md:hidden border-t border-white/5 px-4 sm:px-6 py-4 font-body text-sm">
+            <div class="max-w-[1360px] mx-auto flex flex-col gap-3">
+                <a target="_blank" rel="noopener noreferrer" href="./assets/cv_akash.pdf">Resume</a>
                 <a href="#research">Projects</a>
                 <a href="#experience">Experience</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
-    <main id="main-content" class="relative pt-32 pb-24 px-6">
+    <main id="main-content" class="relative pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6">
         <div class="max-w-[1360px] mx-auto">
-            <section class="mb-32 border-b border-white/5 pb-24 text-center">
+            <section class="mb-20 sm:mb-32 border-b border-white/5 pb-16 sm:pb-24 text-center">
                 <p class="font-display text-primary text-sm mb-6 tracking-[0.18em]">AI · ML · VISION · LLM</p>
-                <h1 class="text-5xl md:text-7xl text-white leading-tight max-w-5xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl text-white leading-tight max-w-5xl mx-auto">
                     I build AI systems for <span class="text-primary italic">real problems.</span>
                 </h1>
                 <div class="max-w-2xl mx-auto mt-8">
-                    <p class="text-lg md:text-xl leading-relaxed font-light text-slate-400">
+                    <p class="text-base sm:text-lg md:text-xl leading-relaxed font-light text-slate-400">
                         I’m Mohammad Akash, an AI/ML engineer based in Dhaka. I work on computer vision, LLM systems,
                         and practical automation.
                     </p>
@@ -142,7 +153,7 @@
                         </div>
                     </div>
             </section>
-            <section class="mb-32" id="research">
+            <section class="mb-20 sm:mb-32" id="research">
                 <div class="border-t border-white/5 pt-6 mb-8">
                     <p class="font-display text-primary text-sm mb-2 tracking-[0.14em]">§ 01 &nbsp; SELECTED PROJECTS</p>
                     <h2 class="text-4xl text-white">A few things I’ve <span class="text-primary italic">built.</span></h2>
@@ -166,7 +177,7 @@
                                 Visit Betopia AI <span aria-hidden="true" class="ml-2">↗</span>
                             </a>
                         </div>
-                        <div class="md:col-span-7 border border-white/10 bg-card-dark p-6 md:p-8">
+                        <div class="md:col-span-7 border border-white/10 bg-card-dark p-5 sm:p-6 md:p-8">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                                 <div>
                                     <p class="font-display text-xs text-primary mb-2">ADOPTION</p>
@@ -208,32 +219,6 @@
                     <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
                         <p class="font-display text-primary text-sm md:col-span-1">03</p>
                         <div class="md:col-span-8">
-                            <h3 class="text-2xl text-white mb-2">RAGbot: Knowledge Assistant</h3>
-                            <p class="text-slate-400 leading-relaxed">
-                                An LLM-powered assistant using Gemini Pro, FAISS semantic search, and document chunking
-                                for enterprise PDFs.
-                            </p>
-                            <p class="font-display text-xs text-slate-500 mt-3">LLMs · FAISS · Gemini · 88.4% retrieval accuracy</p>
-                        </div>
-                        <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/RAGbot-gui">View repository →</a>
-                    </article>
-
-                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
-                        <p class="font-display text-primary text-sm md:col-span-1">04</p>
-                        <div class="md:col-span-8">
-                            <h3 class="text-2xl text-white mb-2">Social Media Post Maker</h3>
-                            <p class="text-slate-400 leading-relaxed">
-                                A multimodal pipeline that turns video and audio into publish-ready social posts using
-                                transcription, summarization, and Gemini.
-                            </p>
-                            <p class="font-display text-xs text-slate-500 mt-3">Whisper · Gemini API · 1.2 s average latency</p>
-                        </div>
-                        <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/video-audio-to-social-media-post-maker">View repository →</a>
-                    </article>
-
-                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
-                        <p class="font-display text-primary text-sm md:col-span-1">05</p>
-                        <div class="md:col-span-8">
                             <h3 class="text-2xl text-white mb-2">AI-Based Grocery Checkout</h3>
                             <p class="text-slate-400 leading-relaxed">
                                 A computer vision checkout system for recognizing products and building a real-time
@@ -242,6 +227,64 @@
                             <p class="font-display text-xs text-slate-500 mt-3">Computer vision · FastAPI · Docker · AWS · 0.995 mAP@50</p>
                         </div>
                         <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/AI_Product_Checkout_System">View repository →</a>
+                    </article>
+
+                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
+                        <p class="font-display text-primary text-sm md:col-span-1">04</p>
+                        <div class="md:col-span-11">
+                            <h3 class="text-2xl text-white mb-2">LUMINA / Auralis</h3>
+                            <p class="text-slate-400 leading-relaxed max-w-4xl">
+                                Cross-platform AI medical reporting and writing platform for healthcare professionals.
+                            </p>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 mt-5 max-w-5xl">
+                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
+                                    <span class="text-primary font-display shrink-0">—</span>
+                                    AI workflows for proofreading, summarization, clinical interpretation, and medical
+                                    diagram generation with GPT-4 and Claude
+                                </li>
+                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
+                                    <span class="text-primary font-display shrink-0">—</span>
+                                    Secure REST APIs with PostgreSQL, JWT authentication, and subscriptions serving
+                                    1,000+ monthly active users
+                                </li>
+                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
+                                    <span class="text-primary font-display shrink-0">—</span>
+                                    Rust desktop assistant with global hotkeys and multilingual support reached 50K+
+                                    downloads; document automation cut report writing time by 70%
+                                </li>
+                            </ul>
+                            <p class="font-display text-xs text-slate-500 mt-4">
+                                Rust · Python · Node.js · PostgreSQL · React · OpenAI API · Docker
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
+                        <p class="font-display text-primary text-sm md:col-span-1">05</p>
+                        <div class="md:col-span-11">
+                            <h3 class="text-2xl text-white mb-2">AI-Powered Sales Agent</h3>
+                            <p class="text-slate-400 leading-relaxed max-w-4xl">
+                                ERP-integrated AI agent automating client communication and sales workflows.
+                            </p>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 mt-5 max-w-5xl">
+                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
+                                    <span class="text-primary font-display shrink-0">—</span>
+                                    Cut manual ERP interaction by 65%, freeing the sales team for high-value
+                                    relationships
+                                </li>
+                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
+                                    <span class="text-primary font-display shrink-0">—</span>
+                                    FastAPI and LLM APIs enable real-time inventory queries and order processing
+                                </li>
+                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
+                                    <span class="text-primary font-display shrink-0">—</span>
+                                    Lead prioritization and automated follow-ups improved sales cycle velocity by 40%
+                                </li>
+                            </ul>
+                            <p class="font-display text-xs text-slate-500 mt-4">
+                                Python · FastAPI · LangChain · LLMs · ERP Integration
+                            </p>
+                        </div>
                     </article>
                 </div>
             </section>
@@ -355,7 +398,7 @@
                     <div id="contact" class="bg-card-dark technical-border rounded-2xl p-6">
                         <p class="font-display text-primary text-sm mb-8 tracking-[0.14em]">§ 05 &nbsp; GET IN TOUCH</p>
                         <div class="space-y-4">
-                            <a class="block font-display text-lg md:text-xl text-primary transition-colors truncate"
+                            <a class="block font-display text-base sm:text-lg md:text-xl text-primary transition-colors wrap-anywhere"
                                 href="mailto:mhakash160@gmail.com">
                                 mhakash160@gmail.com
                             </a>
@@ -371,7 +414,7 @@
             </section>
         </div>
     </main>
-    <footer class="py-12 px-6 border-t border-white/5">
+    <footer class="py-8 sm:py-12 px-4 sm:px-6 border-t border-white/5">
         <div
             class="max-w-[1360px] mx-auto flex flex-col md:flex-row justify-between items-center font-display text-[10px] opacity-50 uppercase tracking-[0.2em]">
             <span>© 2026 Mohammad Akash</span>
