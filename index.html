@@ -55,8 +55,8 @@
         body .bg-card-dark { background-color: #151C26 !important; }
         body .text-white { color: #F1ECE2 !important; }
         body .text-slate-300 { color: #A8A49C !important; }
-        body .text-slate-400 { color: #BDB6AA !important; }
-        body .text-slate-500 { color: #9B9EA7 !important; }
+        body .text-slate-400 { color: #D0C8BC !important; }
+        body .text-slate-500 { color: #A9ABB2 !important; }
         body .text-primary { color: #6DAFE3 !important; }
         body .bg-primary { background-color: #F1ECE2 !important; color: #142033 !important; }
         body .border-primary { border-color: #6DAFE3 !important; }
@@ -93,6 +93,12 @@
             user-select: none;
         }
         .hero-copy { margin-top: clamp(0rem, calc(100vw - 51rem), 6rem) !important; }
+        .project-row {
+            border: 1px solid #293340;
+            padding: 1.75rem 1.25rem;
+            transition: background-color 180ms ease, border-color 180ms ease;
+        }
+        .project-row:hover { background-color: #121923; border-color: #6DAFE3; }
 
         :focus-visible { outline: 2px solid #6DAFE3; outline-offset: 3px; }
         .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: #6DAFE3; color: #0E131B; padding: 0.75rem 1rem; }
@@ -148,7 +154,7 @@
     </nav>
     <main id="main-content" class="relative pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6">
         <div class="max-w-[1360px] mx-auto">
-            <section class="mb-20 sm:mb-32 border-b border-white/5 pb-16 sm:pb-24 text-center">
+            <section class="mb-12 sm:mb-16 border-b border-white/5 pb-8 sm:pb-12 text-center">
                 <h1 class="hero-title relative text-4xl sm:text-5xl md:text-7xl text-white leading-tight max-w-5xl mx-auto">
                     I AM <span class="hero-name text-primary italic">AKASH.</span>
                     <img src="assets/image1.png" alt="" aria-hidden="true" class="hero-portrait" />
@@ -222,7 +228,7 @@
                 </article>
 
                 <div class="divide-y divide-white/5">
-                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
+                    <article class="project-row grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
                         <p class="font-display text-primary text-sm md:col-span-1">02</p>
                         <div class="md:col-span-8">
                             <h3 class="text-2xl text-white mb-2">Autonomous Chemical Spraying Robot</h3>
@@ -235,7 +241,7 @@
                         <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/USR">View repository →</a>
                     </article>
 
-                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
+                    <article class="project-row grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
                         <p class="font-display text-primary text-sm md:col-span-1">03</p>
                         <div class="md:col-span-8">
                             <h3 class="text-2xl text-white mb-2">AI-Based Grocery Checkout</h3>
@@ -248,7 +254,7 @@
                         <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/AI_Product_Checkout_System">View repository →</a>
                     </article>
 
-                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
+                    <article class="project-row grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
                         <p class="font-display text-primary text-sm md:col-span-1">04</p>
                         <div class="md:col-span-11">
                             <h3 class="text-2xl text-white mb-2">LUMINA / Auralis</h3>
@@ -264,7 +270,6 @@
                                 <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
                                     <span class="text-primary font-display shrink-0">—</span>
                                     Secure REST APIs with PostgreSQL, JWT authentication, and subscriptions serving
-                                    1,000+ monthly active users
                                 </li>
                                 <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
                                     <span class="text-primary font-display shrink-0">—</span>
@@ -277,7 +282,7 @@
                         </div>
                     </article>
 
-                    <article class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
+                    <article class="project-row grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
                         <p class="font-display text-primary text-sm md:col-span-1">05</p>
                         <div class="md:col-span-11">
                             <h3 class="text-2xl text-white mb-2">AI-Powered Sales Agent</h3>
