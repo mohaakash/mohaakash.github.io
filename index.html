@@ -1,470 +1,188 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta name="description" content="Mohammad Akash is an AI/ML Engineer building production systems in computer vision, LLMs, and intelligent automation." />
-    <meta name="keywords" content="Mohammad Akash, AI/ML Engineer, computer vision, LLM, machine learning, Bangladesh" />
-    <meta name="author" content="Mohammad Akash" />
-    <meta name="theme-color" content="#0E131B" />
-    <meta property="og:title" content="Mohammad Akash | AI/ML Engineer" />
-    <meta property="og:description" content="AI/ML Engineer building systems in computer vision, LLMs, and intelligent automation." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mohaakash.github.io/" />
-    <link rel="canonical" href="https://mohaakash.github.io/" />
-    <title>Mohammad Akash | AI/ML Engineer</title>
-    <link rel="icon" type="image/png" href="./assets/favicon.png" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#6DAFE3",
-                        "background-light": "#0E131B",
-                        "background-dark": "#0E131B",
-                        "card-dark": "#151C26",
-                    },
-                    fontFamily: {
-                        display: ["DM Mono", "monospace"],
-                        body: ["DM Sans", "sans-serif"],
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.15rem",
-                    },
-                },
-            },
-        };
-    </script>
-    <style>
-        .technical-border { border: 1px solid #293340; }
-        nav { background: rgba(14, 19, 27, 0.5) !important; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohammad Akash — AI/ML Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#ececec;--fg:#111;--muted:#8a8a8a;--line:#d6d6d6}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg)}
+  body{
+    font-family:'DM Sans',system-ui,sans-serif;color:var(--fg);
+    min-height:1240px;position:relative;
+    background:radial-gradient(ellipse 60% 220px at 50% 0,#fff 0,rgba(255,255,255,0) 100%),var(--bg);
+    background-repeat:no-repeat;
+  }
+  .pill{
+    position:absolute;left:50%;transform:translateX(-50%);
+    display:flex;align-items:center;height:18px;padding:0 9px;gap:8px;
+    border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.35);
+    font-size:7.5px;color:#555;letter-spacing:.2px;white-space:nowrap
+  }
+  .pill i{width:5px;height:5px;border-radius:50%;background:#bbb;display:block}
+  .pill .sep{width:1px;height:9px;background:var(--line)}
+  .pill svg{width:6px;height:6px;fill:#222}
+  .hero{position:absolute;top:32px;left:0;right:0;text-align:center}
+  .avatar{
+    width:60px;height:60px;border-radius:50%;margin:0 auto;overflow:hidden;
+    background:#d9d9d9;box-shadow:0 0 0 3px rgba(255,255,255,.5)
+  }
+  .avatar img{width:100%;height:100%;display:block;object-fit:cover;filter:grayscale(.2)}
+  .name{font-size:10.5px;margin-top:11px;letter-spacing:.1px}
+  h1{
+    font-weight:300;font-size:30px;line-height:1.02;margin-top:24px;letter-spacing:-.4px;
+  }
+  h1 svg{width:23px;height:23px;vertical-align:-3px;margin:0 2px;stroke:#111;fill:none;stroke-width:1.6}
 
-        body { background: #0E131B !important; color: #F1ECE2 !important; }
-        body .bg-background-dark { background-color: #0E131B !important; }
-        body .bg-card-dark { background-color: #151C26 !important; }
-        body .text-white { color: #F1ECE2 !important; }
-        body .text-slate-300 { color: #A8A49C !important; }
-        body .text-slate-400 { color: #D0C8BC !important; }
-        body .text-slate-500 { color: #A9ABB2 !important; }
-        body .text-primary { color: #6DAFE3 !important; }
-        body .bg-primary { background-color: #F1ECE2 !important; color: #142033 !important; }
-        body .border-primary { border-color: #6DAFE3 !important; }
-        body .border-white\/5 { border-color: #293340 !important; }
-        body .border-white\/10 { border-color: #293340 !important; }
-        body .bg-white\/5 { background-color: #18202B !important; }
-        body .bg-black\/20 { background-color: #10161F !important; }
-        body .bg-black\/40 { background-color: #10161F !important; }
-        body .bg-black\/50 { background-color: #10161F !important; }
-        body .border-slate-700 { border-color: #293340 !important; }
-        body .hover\:bg-slate-800:hover { background-color: #1D2734 !important; }
-        body a.bg-primary:hover { color: #F1ECE2 !important; }
-        body .selection\:bg-primary::selection { background-color: #6DAFE3 !important; color: #0E131B !important; }
-        h1, h2, h3, h4 { font-family: "DM Serif Display", Georgia, serif !important; font-weight: 400 !important; letter-spacing: -0.025em; }
-        .site-name { font-family: "DM Serif Display", Georgia, serif; font-size: 1.2rem; }
-        .nav-avatar { transform: scale(1.8); transform-origin: 50% 31%; }
-        .contact-portrait { transform: scale(1.45); transform-origin: 50% 31%; }
-        .hero-title {
-            isolation: isolate;
-            font-size: clamp(5rem, 11vw, 10rem) !important;
-            line-height: 0.9 !important;
-        }
-        .hero-name { margin-left: 0.12em; }
-        .hero-portrait {
-            position: absolute;
-            z-index: 2;
-            top: -9.5rem;
-            left: 50%;
-            width: clamp(14rem, 31vw, 26rem);
-            max-width: none;
-            height: auto;
-            transform: translateX(-50%);
-            pointer-events: none;
-            user-select: none;
-        }
-        .hero-copy { margin-top: clamp(0rem, calc(100vw - 51rem), 6rem) !important; }
-        .project-row {
-            border: 1px solid #293340;
-            padding: 1.75rem 1.25rem;
-            transition: background-color 180ms ease, border-color 180ms ease;
-        }
-        .project-row:hover { background-color: #121923; border-color: #6DAFE3; }
+  .dock{
+    position:absolute;top:233px;left:50%;transform:translateX(-50%);
+    display:flex;align-items:center;gap:5px;padding:4px;border-radius:12px;
+    background:rgba(240,240,240,.85);box-shadow:0 6px 22px rgba(0,0,0,.12),0 0 0 1px rgba(255,255,255,.7) inset;
+  }
+  .ic{
+    width:29px;height:29px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+    color:#fff;font-weight:700;font-size:13px;text-decoration:none;flex:none
+  }
+  .ic.logo{padding:4px;background:#fff}
+  .ic.logo img{width:100%;height:100%;display:block;object-fit:contain;border-radius:4px}
+  .ic.cv{background:#f1df73;color:#333;font-size:10px;font-weight:500}
+  .ic svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .dock .div{width:1px;height:22px;background:#cfcfcf;margin:0 2px}
 
-        :focus-visible { outline: 2px solid #6DAFE3; outline-offset: 3px; }
-        .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: #6DAFE3; color: #0E131B; padding: 0.75rem 1rem; }
-        .skip-link:focus { left: 1rem; }
+  .about{
+    position:absolute;top:302px;left:50%;transform:translateX(-50%);
+    width:262px;font-size:9.4px;line-height:1.5;color:#222
+  }
+  .about p{margin-bottom:11.5px}
+  .about a{color:inherit;text-decoration:underline;text-decoration-color:#888;text-underline-offset:2px}
+  .about-final{margin-top:18px}
+  .about-final a{color:#111;font-weight:500}
+  .about-final .linkedin,
+  .about-final .email,
+  .about-final .github,
+  .cv-button{
+    text-decoration:none;padding:0 .04em;border-radius:1px;
+    background-position:0 0;background-repeat:no-repeat;background-size:100% 100%;
+  }
+  .about-final .linkedin{background-image:linear-gradient(transparent 46%,rgba(241,223,115,.7) 46%,rgba(241,223,115,.7) 92%,transparent 92%)}
+  .about-final .email{background-image:linear-gradient(transparent 46%,rgba(224,112,112,.52) 46%,rgba(224,112,112,.52) 92%,transparent 92%)}
+  .about-final .github{background-image:linear-gradient(transparent 46%,rgba(220,143,188,.58) 46%,rgba(220,143,188,.58) 92%,transparent 92%)}
+  .cv-button{display:inline-flex;align-items:center;gap:4px;margin-top:-2px;color:#111;font-size:8.5px;background-image:linear-gradient(transparent 46%,rgba(112,181,132,.58) 46%,rgba(112,181,132,.58) 92%,transparent 92%)}
+  .cv-button svg{width:8px;height:8px;stroke:currentColor;fill:none;stroke-width:1.6}
 
-        /* Keep content usable on very narrow screens, including long project URLs and technical terms. */
-        html, body { overflow-x: hidden; }
-        img { max-width: 100%; }
-        .wrap-anywhere { overflow-wrap: anywhere; }
+  .projects{
+    position:absolute;top:650px;left:50%;transform:translateX(-50%);
+    width:min(720px,calc(100vw - 32px));padding-bottom:48px;color:#222
+  }
+  .projects h2{font-size:24px;line-height:1.1;font-weight:400;letter-spacing:-.5px;margin-bottom:9px}
+  .projects-intro{font-size:10px;line-height:1.5;color:#555;margin-bottom:24px;max-width:560px}
+  .project-list{border-top:1px solid var(--line)}
+  .project{
+    display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:start;
+    padding:18px 0;border-bottom:1px solid var(--line)
+  }
+  .project-mark{
+    width:72px;height:64px;border:1px solid rgba(17,17,17,.14);border-radius:4px;
+    display:flex;flex-direction:column;justify-content:space-between;padding:8px;
+    color:#111;background:#dcdcdc
+  }
+  .project-mark span{font-size:9px;color:#666}
+  .project-mark strong{font-size:10px;letter-spacing:.5px;font-weight:500}
+  .mark-ai{background:#dce9df}
+  .mark-robot{background:#d8e1ea}
+  .mark-vision{background:#f2cf55}
+  .mark-data{background:#dce4ef}
+  .mark-router{background:#e8ddd4}
+  .mark-health{background:#e6e0ef}
+  .mark-agent{background:#e6e6e6}
+  .project h3{font-size:14px;line-height:1.2;font-weight:500;margin:1px 0 6px}
+  .project h3 a{color:inherit;text-decoration:underline;text-decoration-color:#999;text-underline-offset:2px}
+  .project p{font-size:10px;line-height:1.5;color:#333;margin-bottom:6px}
+  .project-meta{font-size:8.5px;line-height:1.4;color:var(--muted)}
 
-        @media (max-width: 767px) {
-            .site-name { font-size: 1.05rem; }
-            #mobile-nav a { padding: 0.25rem 0; }
-            .hero-portrait { top: -4.25rem; width: 14rem; }
-            .hero-copy { margin-top: 0 !important; }
-        }
-    </style>
+  @media (min-width:900px){ body{zoom:1.35} }
+  @media (max-width:520px){
+    .projects{width:calc(100vw - 24px)}
+    .project{grid-template-columns:60px 1fr;gap:12px}
+    .project-mark{width:60px;height:60px}
+  }
+</style>
 </head>
+<body>
 
-<body
-    class="bg-background-dark text-slate-300 font-body selection:bg-primary selection:text-white">
-    <a class="skip-link" href="#main-content">Skip to content</a>
-    <nav
-        class="fixed top-0 w-full z-50 border-b border-white/5 bg-background-dark/50 backdrop-blur-md">
-        <div
-            class="max-w-[1360px] mx-auto px-4 sm:px-6 h-16 flex items-center justify-between font-body text-sm gap-2">
-            <div class="flex items-center space-x-2">
-                <span class="site-name text-white">Mohammad Akash</span>
-            </div>
-            <div class="hidden md:flex space-x-8">
-                <a class="hover:text-primary transition-colors" href="#research">Projects</a>
-                <a class="hover:text-primary transition-colors" href="#experience">Experience</a>
-                <a class="hover:text-primary transition-colors" href="#contact">Contact</a>
-            </div>
-            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                <a target="_blank" rel="noopener noreferrer"
-                    class="hidden sm:inline-flex border border-slate-700 px-4 py-2 rounded-full hover:bg-slate-800 transition-all"
-                    href="./assets/cv_akash.pdf">Resume</a>
-                <a class="border border-primary px-3 sm:px-4 py-2 rounded-full bg-primary hover:bg-slate-800 transition-all"
-                    href="mailto:mhakash160@gmail.com">Email</a>
-                <button id="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav"
-                    aria-label="Open navigation menu" class="md:hidden border border-slate-700 px-3 sm:px-4 py-2 rounded-full text-white">Menu</button>
-            </div>
-        </div>
-        <div id="mobile-nav" class="hidden md:hidden border-t border-white/5 px-4 sm:px-6 py-4 font-body text-sm">
-            <div class="max-w-[1360px] mx-auto flex flex-col gap-3">
-                <a target="_blank" rel="noopener noreferrer" href="./assets/cv_akash.pdf">Resume</a>
-                <a href="#research">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
-    <main id="main-content" class="relative pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6">
-        <div class="max-w-[1360px] mx-auto">
-            <section class="mb-12 sm:mb-16 border-b border-white/5 pb-8 sm:pb-12 text-center">
-                <h1 class="hero-title relative text-4xl sm:text-5xl md:text-7xl text-white leading-tight max-w-5xl mx-auto">
-                    I AM <span class="hero-name text-primary italic">AKASH.</span>
-                    <img src="assets/image1.png" alt="" aria-hidden="true" class="hero-portrait" />
-                </h1>
-                <div class="hero-copy max-w-2xl mx-auto mt-8">
-                    <p class="text-base sm:text-lg md:text-xl leading-relaxed font-light text-slate-400">
-                        AN AI/ML engineer based in Dhaka. I work on computer vision, LLM systems,
-                        and practical automation.
-                    </p>
-                        <div class="flex flex-wrap justify-center gap-4 font-display text-xs tracking-widest mt-8">
-                            <a class="border border-primary bg-primary px-5 py-3 rounded-full hover:bg-slate-800 transition-colors"
-                                href="#research">View projects <span aria-hidden="true">→</span></a>
-                            <a class="border border-slate-700 px-5 py-3 rounded-full hover:bg-slate-800 transition-colors"
-                                href="#contact">Let’s connect</a>
-                        </div>
-                        <div class="flex justify-center space-x-6 font-display text-xs tracking-widest uppercase mt-7">
-                            <a class="hover:text-primary transition-colors"
-                                href="https://www.linkedin.com/in/mohaakash/">LinkedIn</a>
-                            <a class="hover:text-primary transition-colors"
-                                href="https://github.com/mohaakash">GitHub</a>
-                        </div>
-                    </div>
-            </section>
-            <section class="mb-20 sm:mb-32" id="research">
-                <div class="pt-6 mb-8">
-                    <p class="font-display text-primary text-sm mb-2 tracking-[0.14em]">§ 01 &nbsp; SELECTED PROJECTS</p>
-                    <h2 class="text-4xl text-white">A few things I’ve <span class="text-primary italic">built.</span></h2>
-                </div>
+<section class="hero">
+  <div class="avatar">
+    <img src="images/p.jpeg" alt="Mohammad Akash with a cat">
+  </div>
+  <div class="name">Mohammad Akash</div>
+  <h1>AI/ML
+    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 4.5-9 4.5-9-4.5z"/><path d="M3 12l9 4.5 3-1.5"/><path d="M3 16.5L12 21l4-2"/><path d="M19 15v6M16 18h6"/></svg>
+    engineer<br>&amp; systems builder</h1>
+</section>
 
-                <article class="border-y border-white/5 py-8 md:py-10">
-                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
-                        <div class="md:col-span-5">
-                            <p class="font-display text-primary text-sm tracking-[0.14em] mb-4">01 &nbsp; FEATURED PROJECT</p>
-                            <h3 class="text-3xl md:text-4xl text-white mb-4">Betopia AI Ecosystem</h3>
-                            <p class="text-slate-400 leading-relaxed max-w-lg">
-                                An internal AI ecosystem that gives Betopia teams one reliable platform for conversation,
-                                code, generative media, model routing, and autonomous workflows.
-                            </p>
-                            <p class="font-display text-xs text-slate-500 mt-5">
-                                Model routing · LLM infrastructure · Observability · Production platform
-                            </p>
-                            <a target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center text-sm font-display text-primary mt-6 hover:underline"
-                                href="https://betopia.ai/">
-                                Visit Betopia AI <span aria-hidden="true" class="ml-2">↗</span>
-                            </a>
-                        </div>
-                        <div class="md:col-span-7 border border-white/10 bg-card-dark p-5 sm:p-6 md:p-8">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
-                                <div>
-                                    <p class="font-display text-xs text-primary mb-2">ADOPTION</p>
-                                    <p class="text-xl text-white">26 SBUs</p>
-                                    <p class="text-sm text-slate-500 mt-1">Used across the Betopia group</p>
-                                </div>
-                                <div>
-                                    <p class="font-display text-xs text-primary mb-2">REACH</p>
-                                    <p class="text-xl text-white">5,000+ employees</p>
-                                    <p class="text-sm text-slate-500 mt-1">Supporting internal AI workflows</p>
-                                </div>
-                                <div>
-                                    <p class="font-display text-xs text-primary mb-2">CAPABILITIES</p>
-                                    <p class="text-sm text-slate-400 leading-relaxed">Inference routing · fallback models · model comparison</p>
-                                </div>
-                                <div>
-                                    <p class="font-display text-xs text-primary mb-2">OPERATIONS</p>
-                                    <p class="text-sm text-slate-400 leading-relaxed">Usage monitoring · latency and spend tracking · request traces</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+<nav class="dock">
+  <a class="ic logo" href="https://linkedin.com/in/mohaakash/" aria-label="LinkedIn" title="LinkedIn"><img src="images/icons/linkedin.png" alt=""></a>
+  <a class="ic logo" href="https://github.com/mohaakash" aria-label="GitHub" title="GitHub"><img src="images/icons/github.png" alt=""></a>
+  <a class="ic logo" href="https://www.youtube.com/@mohaakash" aria-label="YouTube" title="YouTube"><img src="images/icons/play.png" alt=""></a>
+  <a class="ic logo" href="https://www.instagram.com/mohaakash_/" aria-label="Instagram" title="Instagram"><img src="images/icons/instagram.png" alt=""></a>
+  <a class="ic cv" href="cv/cv.pdf" download="Mohammad-Akash-CV.pdf" aria-label="Download CV" title="Download CV">CV</a>
+</nav>
 
-                <div class="divide-y divide-white/5">
-                    <article class="project-row grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
-                        <p class="font-display text-primary text-sm md:col-span-1">02</p>
-                        <div class="md:col-span-8">
-                            <h3 class="text-2xl text-white mb-2">Autonomous Chemical Spraying Robot</h3>
-                            <p class="text-slate-400 leading-relaxed">
-                                A real-time perception and control system for precision agriculture, identifying weeds
-                                and crops and triggering targeted spraying on edge hardware.
-                            </p>
-                            <p class="font-display text-xs text-slate-500 mt-3">Computer vision · Robotics · YOLOv8-Nano · 42 ms · 0.92 mAP@50</p>
-                        </div>
-                        <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/USR">View repository →</a>
-                    </article>
+<main class="about">
+  <p>Hi, I’m Mohammad Akash — an AI/ML engineer based in Dhaka. 👋</p>
+  <p>I build practical systems across computer vision, LLM applications, robotics, and automation. 🤖</p>
+  <p>I’m currently an AI Engineer at <a href="https://betopia.ai/">Betopia Group</a>, contributing to an internal AI ecosystem used across 26 SBUs and more than 5,000 employees.</p>
+  <p>My selected work includes an autonomous chemical-spraying robot, an AI grocery checkout system, a medical reporting platform, and an ERP-integrated sales agent. 🛠️</p>
+  <p>I studied Computer Science and Engineering at North South University, specializing in machine learning and computer vision.</p>
+  <p class="about-final">You can reach me on <span aria-hidden="true">💼</span> <a class="linkedin" href="https://linkedin.com/in/mohaakash/">LinkedIn</a>, via <span aria-hidden="true">✉️</span> <a class="email" href="mailto:mhakash160@gmail.com">email</a>, or see my code on <span aria-hidden="true">💻</span> <a class="github" href="https://github.com/mohaakash">GitHub</a>. My CV is also available.</p>
+  <a class="cv-button" href="cv/cv.pdf" download="Mohammad-Akash-CV.pdf" aria-label="Download CV"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>CV</a>
+</main>
 
-                    <article class="project-row grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
-                        <p class="font-display text-primary text-sm md:col-span-1">03</p>
-                        <div class="md:col-span-8">
-                            <h3 class="text-2xl text-white mb-2">AI-Based Grocery Checkout</h3>
-                            <p class="text-slate-400 leading-relaxed">
-                                A computer vision checkout system for recognizing products and building a real-time
-                                shopping list.
-                            </p>
-                            <p class="font-display text-xs text-slate-500 mt-3">Computer vision · FastAPI · Docker · AWS · 0.995 mAP@50</p>
-                        </div>
-                        <a target="_blank" rel="noopener noreferrer" class="md:col-span-3 md:text-right text-sm font-display text-primary hover:underline" href="https://github.com/mohaakash/AI_Product_Checkout_System">View repository →</a>
-                    </article>
+<section class="projects" aria-labelledby="projects-title">
+  <h2 id="projects-title">Projects</h2>
+  <p class="projects-intro">A selection of personal projects I’ve built across computer vision, robotics, and practical AI.</p>
 
-                    <article class="project-row grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
-                        <p class="font-display text-primary text-sm md:col-span-1">04</p>
-                        <div class="md:col-span-11">
-                            <h3 class="text-2xl text-white mb-2">LUMINA / Auralis</h3>
-                            <p class="text-slate-400 leading-relaxed max-w-4xl">
-                                Cross-platform AI medical reporting and writing platform for healthcare professionals.
-                            </p>
-                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 mt-5 max-w-5xl">
-                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
-                                    <span class="text-primary font-display shrink-0">—</span>
-                                    AI workflows for proofreading, summarization, clinical interpretation, and medical
-                                    diagram generation with GPT-4 and Claude
-                                </li>
-                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
-                                    <span class="text-primary font-display shrink-0">—</span>
-                                    Secure REST APIs with PostgreSQL, JWT authentication, and subscriptions serving
-                                </li>
-                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
-                                    <span class="text-primary font-display shrink-0">—</span>
-                                    Rust desktop assistant with global hotkeys and multilingual support; document automation cut report writing time by 70%
-                                </li>
-                            </ul>
-                            <p class="font-display text-xs text-slate-500 mt-4">
-                                Rust · Python · Node.js · PostgreSQL · React · OpenAI API · Docker
-                            </p>
-                        </div>
-                    </article>
+  <div class="project-list">
+    <article class="project">
+      <div class="project-mark mark-robot"><span>01</span><strong>ROBOTICS</strong></div>
+      <div>
+        <h3><a href="https://github.com/mohaakash/USR">Autonomous Chemical Spraying Robot</a></h3>
+        <p>A real-time perception and control system for precision agriculture that identifies weeds and crops and triggers targeted spraying on edge hardware.</p>
+        <div class="project-meta">Computer vision · YOLOv8-Nano · 42 ms · 0.92 mAP@50</div>
+      </div>
+    </article>
 
-                    <article class="project-row grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-12 py-7 items-start">
-                        <p class="font-display text-primary text-sm md:col-span-1">05</p>
-                        <div class="md:col-span-11">
-                            <h3 class="text-2xl text-white mb-2">AI-Powered Sales Agent</h3>
-                            <p class="text-slate-400 leading-relaxed max-w-4xl">
-                                ERP-integrated AI agent automating client communication and sales workflows.
-                            </p>
-                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 mt-5 max-w-5xl">
-                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
-                                    <span class="text-primary font-display shrink-0">—</span>
-                                    Cut manual ERP interaction by 65%, freeing the sales team for high-value
-                                    relationships
-                                </li>
-                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
-                                    <span class="text-primary font-display shrink-0">—</span>
-                                    FastAPI and LLM APIs enable real-time inventory queries and order processing
-                                </li>
-                                <li class="flex gap-3 text-sm text-slate-400 leading-relaxed">
-                                    <span class="text-primary font-display shrink-0">—</span>
-                                    Lead prioritization and automated follow-ups improved sales cycle velocity by 40%
-                                </li>
-                            </ul>
-                            <p class="font-display text-xs text-slate-500 mt-4">
-                                Python · FastAPI · LangChain · LLMs · ERP Integration
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-white/5 pt-16">
-                <div class="md:col-span-8 space-y-16" id="experience">
-                    <div>
-                        <p class="font-display text-primary text-sm mb-8 tracking-[0.14em]">§ 02 &nbsp; EXPERIENCE</p>
-                        <div class="space-y-12">
-                            <div class="flex flex-col md:flex-row gap-4 md:gap-12">
-                                <div class="md:w-32 font-display text-xs opacity-40 py-1">2025 — PRESENT</div>
-                                <div class="flex-1">
-                                    <h4 class="text-xl font-semibold text-white mb-1 bg-primary inline-block px-1">AI
-                                        Engineer</h4>
-                                    <p class="font-display text-sm text-primary mb-4">BETOPIA GROUP, DHAKA</p>
-                                    <p class="text-sm text-slate-400 leading-relaxed max-w-xl mb-4">Contributing to the
-                                        Betopia AI Ecosystem, an internal AI platform used across 26 SBUs and by more
-                                        than 5,000 employees.</p>
-                                    <ul class="space-y-2 max-w-xl">
-                                        <li class="flex gap-3 text-sm text-slate-400">
-                                            <span class="text-primary font-display shrink-0">—</span>
-                                            Designed and deployed the model gateway, giving teams unified API access
-                                            to multiple models with routing and fallback support
-                                        </li>
-                                        <li class="flex gap-3 text-sm text-slate-400">
-                                            <span class="text-primary font-display shrink-0">—</span>
-                                            Contributed to a production ecosystem used across 26 SBUs and supporting
-                                            more than 5,000 employees
-                                        </li>
-                                        <li class="flex gap-3 text-sm text-slate-400">
-                                            <span class="text-primary font-display shrink-0">—</span>
-                                            Developed coding agent for internal engineering use, leveraging proprietary
-                                            LLMs to automate development workflows
-                                        </li>
-                                        <li class="flex gap-3 text-sm text-slate-400">
-                                            <span class="text-primary font-display shrink-0">—</span>
-                                            Fine-tuned transformer-based models for domain-specific tasks, improving
-                                            performance on custom datasets
-                                        </li>
-                                        <li class="flex gap-3 text-sm text-slate-400">
-                                            <span class="text-primary font-display shrink-0">—</span>
-                                            Optimized LLM inference pipelines, reducing latency and improving response
-                                            consistency in production
-                                        </li>
-                                        <li class="flex gap-3 text-sm text-slate-400">
-                                            <span class="text-primary font-display shrink-0">—</span>
-                                            Designed scalable backend systems for AI services, supporting real-time
-                                            inference and external integrations
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="flex flex-col md:flex-row gap-4 md:gap-12">
-                                <div class="md:w-32 font-display text-xs opacity-40 py-1">2020 — 2025</div>
-                                <div class="flex-1">
-                                    <h4 class="text-xl font-semibold text-white mb-1 bg-primary inline-block px-1">B.Sc. in
-                                        Computer Science and
-                                        Engineering</h4>
-                                    <p class="font-display text-sm text-primary mb-4">NORTH SOUTH UNIVERSITY</p>
-                                    <p class="text-sm text-slate-400 leading-relaxed max-w-xl">
-                                        Specialization in Machine Learning and Computer Vision. Focus
-                                        on NLP, Computer Vision, and Robotics.
-                                    </p>
-                                    <ul class="space-y-2 max-w-xl">
-                                        <li class="flex gap-3 text-sm text-slate-400">
-                                            <span class="text-primary font-display shrink-0">—</span>
-                                            THESIS: "Multimodal Deep Learning for Automated Retail Checkout Systems" —
-                                            Developed a novel approach combining CNNs and transformer-based models to
-                                            achieve high-accuracy product recognition in cluttered retail.
-                                        </li>
-                                        <li class="flex gap-3 text-sm text-slate-400">
-                                            <span class="text-primary font-display shrink-0">—</span>
-                                            CAPSTONE PROJECT: "Spraying Robot for Precision Agriculture" — Engineered a
-                                            real-time weed detection system using YOLOv8 deployed on edge hardware,
-                                            achieving 0.92 mAP@50 in field tests.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:col-span-4 space-y-12">
-                    <div>
-                        <p class="font-display text-primary text-sm mb-8 tracking-[0.14em]">§ 03 &nbsp; TECHNICAL TOOLKIT</p>
-                        <div class="border-y border-white/5">
-                            <div class="py-5 border-b border-white/5">
-                                <p class="font-display text-xs text-primary mb-2">ML SYSTEMS</p>
-                                <p class="text-slate-400 leading-relaxed">Python · PyTorch · TensorFlow · scikit-learn · NumPy · OpenCV</p>
-                            </div>
-                            <div class="py-5 border-b border-white/5">
-                                <p class="font-display text-xs text-primary mb-2">LLM &amp; GENAI</p>
-                                <p class="text-slate-400 leading-relaxed">LLM applications · RAG · LangChain · vector search · Gemini, OpenAI &amp; Groq APIs</p>
-                            </div>
-                            <div class="py-5 border-b border-white/5">
-                                <p class="font-display text-xs text-primary mb-2">PRODUCTION</p>
-                                <p class="text-slate-400 leading-relaxed">FastAPI · Docker · AWS · Redis · Git · SQL</p>
-                            </div>
-                            <div class="py-5">
-                                <p class="font-display text-xs text-primary mb-2">METHODS</p>
-                                <p class="text-slate-400 leading-relaxed">Computer vision · NLP · fine-tuning · model evaluation · inference optimization</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="font-display text-primary text-sm mb-8 tracking-[0.14em]">§ 04 &nbsp; INTERESTS</p>
-                        <p class="text-sm text-slate-400 leading-relaxed">
-                            Interested in reliable AI products, multimodal systems, computer vision, robotics, and
-                            practical deployment of machine learning research.
-                        </p>
-                    </div>
-                    <div id="contact" class="bg-card-dark technical-border rounded-2xl p-6">
-                        <p class="font-display text-primary text-sm mb-8 tracking-[0.14em]">§ 05 &nbsp; GET IN TOUCH</p>
-                        <div class="flex items-center gap-4">
-                            <div class="w-20 h-24 sm:w-24 sm:h-28 overflow-hidden rounded-xl border border-primary bg-card-dark shrink-0">
-                                <img src="assets/image1.png" alt="Portrait of Mohammad Akash"
-                                    class="contact-portrait w-full h-full object-cover" />
-                            </div>
-                            <div class="space-y-4 min-w-0">
-                                <a class="block font-display text-base sm:text-lg md:text-xl text-primary transition-colors wrap-anywhere"
-                                    href="mailto:mhakash160@gmail.com">
-                                    mhakash160@gmail.com
-                                </a>
-                                <div class="flex space-x-6 font-display text-xs tracking-widest uppercase">
-                                    <a class="hover:text-primary transition-colors"
-                                        href="https://www.linkedin.com/in/mohaakash/">LinkedIn</a>
-                                    <a class="hover:text-primary transition-colors"
-                                        href="https://github.com/mohaakash">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-    <footer class="py-8 sm:py-12 px-4 sm:px-6 border-t border-white/5">
-        <div
-            class="max-w-[1360px] mx-auto flex flex-col md:flex-row justify-between items-center font-display text-[10px] opacity-50 uppercase tracking-[0.2em]">
-            <span>© 2026 Mohammad Akash</span>
-        </div>
-    </footer>
-    <script>
-        const menuButton = document.getElementById('menu-button');
-        const mobileNav = document.getElementById('mobile-nav');
-        menuButton.addEventListener('click', () => {
-            const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-            menuButton.setAttribute('aria-expanded', String(!isOpen));
-            menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
-            mobileNav.classList.toggle('hidden', isOpen);
-        });
-        mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-            menuButton.setAttribute('aria-expanded', 'false');
-            menuButton.setAttribute('aria-label', 'Open navigation menu');
-            mobileNav.classList.add('hidden');
-        }));
-    </script>
+    <article class="project">
+      <div class="project-mark mark-vision"><span>02</span><strong>VISION</strong></div>
+      <div>
+        <h3><a href="https://github.com/mohaakash/AI_Product_Checkout_System">AI-Based Grocery Checkout</a></h3>
+        <p>A computer vision checkout system that recognizes products and builds a real-time shopping list.</p>
+        <div class="project-meta">Computer vision · FastAPI · Docker · AWS · 0.995 mAP@50</div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-mark mark-data"><span>03</span><strong>DATA / ML</strong></div>
+      <div>
+        <h3><a href="https://github.com/sondeshapp/adder">Adder</a></h3>
+        <p>A local-first desktop data-science workbench for turning messy tabular data into reproducible analysis and machine-learning experiments.</p>
+        <div class="project-meta">React · TypeScript · Tauri · Rust · Python · SQLite · Polars · DuckDB</div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-mark mark-router"><span>04</span><strong>LLM ROUTER</strong></div>
+      <div>
+        <h3><a href="https://github.com/mohaakash/monk-router">monk-router</a></h3>
+        <p>A local, deterministic OpenAI-compatible gateway that chooses the right model for each request using intent-aware routing, ordered fallbacks, health checks, and local-first privacy.</p>
+        <div class="project-meta">Go · Tauri · SQLite · Provider adapters · Model routing · Fallbacks</div>
+      </div>
+    </article>
+
+  </div>
+</section>
 
 </body>
-
 </html>
